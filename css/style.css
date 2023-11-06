@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.main_head{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.menu_list ul{
+    display: flex;
+    gap:20px;
+    list-style: none;
+
+}
+.menu_list ul li a{
+    display: inline-block;
+    position: relative;
+    height: 50px;
+    width: 50px;
+    background: #fff;
+    border-radius: 50px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all linear .4s;
+}
+.menu_list ul li a:hover{
+    width: 150px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+.menu_list ul li a::before{
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 50px;
+    background:  linear-gradient(45deg, var(--i),  var(--j));
+    opacity: 0;
+    transition: all linear .4s;
+}
+.menu_list ul li a:hover::before{
+    opacity: 1;
+}
+.menu_list ul li a::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+    background: linear-gradient(45deg, var(--i),  var(--j));
+    filter: blur(13px);
+    top:10px;
+    z-index: -1;
+    opacity: 0;
+}
+.menu_list ul li a:hover::after{
+    opacity: .5;
+}
+.menu_list ul li a span{
+    position: absolute;
+}
+.menu_list ul li a .icon i{
+    font-size: 20px;
+    color:black;
+    transition: all linear .3s;
+    transition-delay: .25s;
+}
+.menu_list ul li a:hover .icon{
+    transform: scale(0);
+}
+.menu_list ul li a .title{
+    font-size: 16px;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    color:#fff;
+    text-transform: uppercase;
+    transition: all linear .3s;
+    transition-delay: .25s;
+    transform: scale(0);
+}
+.menu_list ul li a:hover .title{
+    transform: scale(1);
+    transition-delay: 0s;
+}
+
+
+
+ 
